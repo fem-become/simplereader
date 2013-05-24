@@ -1,0 +1,221 @@
+.mobile-version{
+    display:none;
+}
+.pad-version{
+    display:none;
+}
+body{
+    height: 100%;
+}
+#branding h1{
+    color: #fff;
+    margin-left: 35px;
+    line-height:44px;
+    font-size:18px;
+}
+#head{
+    position: fixed;
+    height: 44px;
+    background-image: linear-gradient(rgb(69, 144, 211), rgb(65, 144, 210));
+    width: 100%;
+    z-index: 2;
+}
+#reader{
+    min-width: 900px;
+    max-width: 100%;
+    zoom:1;
+    overflow: hidden;
+}
+#search input{
+    border: 1px solid #8c8c8c;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 14px;
+    width: 200px;
+    border-radius: 15px;
+    top: 7px;
+    position: relative;
+    outline:none;
+}
+#search a{
+    float: left;
+    position: relative;
+    margin-top: -19px;
+    margin-left: 187px;
+    color: #757484;
+    font-size: 17px;
+}
+#content{
+    width: 100%;
+    position: relative;
+    top: 44px;
+}
+ul{
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+}
+a,a:hover{
+    color: #727274;
+}
+.action-list{
+}
+.column-actions .action a{
+    float: left;
+}
+.entry-list{
+    overflow: auto;
+}
+#cats.content-column{
+    width: 17%;
+    position: fixed;
+    top:44px;
+    left: 0px;
+    background-color: #edf2f8;
+    text-shadow: 2px 2px 2px #fff;
+    line-height:22px;
+}
+#cats.content-column a{
+    color: #7e8494;
+}
+#cats.content-column .user-cats li:hover a,#cats.content-column .user-cats li.current a{
+    color: #373737;
+    text-shadow: 2px 2px 2px #fff;
+}
+#cats .column-actions{
+    width: 17%;
+    display:none;
+}
+#cats.content-column .system-cats{
+    background-color:#fff ;
+}
+#cats.content-column .system-cats li{
+    color: #546078;
+    border:none !important;
+    text-shadow:none !important;
+}
+#cats.content-column .cat-list li{
+    height: 39px;
+    line-height: 39px;
+    margin-left: 0px;
+    padding-left: 35px;
+    border-top: 1px solid #d9dee4;
+    /*margin-right:10px;*/
+}
+
+#cats.content-column .user-cats li.current{
+    background-color: #e2e6ef;
+}
+#cats.content-column .cat-list a{
+    font-weight: normal;
+}
+#list.content-column{
+    width: 25%;
+    position: fixed;
+    top:75px;
+    left:17%;
+    border-right: 1px solid #d9d9d9;
+    /*box-shadow: -3px 2px 8px rgba(0,0,0,0.2);*/
+}
+#list .column-actions{
+    top: -31px;
+    height: 30px;
+    line-height:30px;
+    background-color: #e7ebf4;
+    width: 100%;
+    overflow: hidden;
+    border:1px solid #d0d8e3;
+    text-align:center;
+}
+#list .column-actions li{
+    display: inline-block;
+    margin:0px 35px;
+    color:#616473;
+}
+
+
+.entry-list{
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+.entry-list li {
+    margin:0px;
+    word-break:break-all;
+    padding:0px;
+}
+.entry-list li:hover {
+    border-left:4px solid #f17b6f !important;
+}
+.entry-list li .inner {
+    border-bottom:1px solid #dddddd;
+    padding:15px;
+}
+.entry-list li.read {
+    border-left:4px solid #56d592;
+}
+.entry-list li.unread {
+    border-left:4px solid #4791d2;
+}
+.entry-list li.current{
+    background:#e9eef4;
+}
+
+.entry-list span{
+    color: #0083e8;
+}
+
+
+
+
+
+
+#entry.content-column{
+    width: 57%;
+    left: 42.5%;
+}
+#entry.content-column .column-actions{
+    left:0px;
+    top:91px;
+    width: 40px;
+    border-top: 4px solid #ccc;
+    text-align: center;
+    padding-top: 10px;
+    color: #333;
+}
+#entry.content-column .column-actions li{
+    color: #cccccc;
+    padding-top: 15px;
+}
+#entry.content-column .column-actions li:hover{
+    color:#333333;
+    cursor:pointer;
+}
+#entry.content-column #entry-content{
+    padding: 20px 20px 20px 50px;
+    line-height: 20px;
+    font-family: "Microsoft YaHei";
+}
+#entry.content-column #entry-content h1.title{
+    font-size: 20px;
+    line-height: 47px;
+}
+.entries .desc{
+    font-size: 12px;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    color:#aaa;
+}
+
+#entry.content-column #entry-content p.time{
+    padding-bottom: 5px;
+}
+#entry.content-column #entry-content div.content{
+    border-top: 1px solid #dddddd;
+    padding-top: 20px;
+}
+
+.clear-scrollbar{
+    background-position: 100px 0px !important;
+}

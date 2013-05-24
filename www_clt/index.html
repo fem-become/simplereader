@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>Simple Reader</title>
+    <link rel="stylesheet" href="topcoat/release/css/topcoat-desktop.css"/>
+    <link rel="stylesheet" href="assets/index.css"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="assets/apple-touch-startup-image-640x920.png">
+    <link rel="stylesheet" media="(min-width:480px) and (max-width:1024px)" href="assets/pad.css">
+    <link rel="stylesheet" media="(max-width:480px)" href="assets/mobile.css">
+    <link rel="stylesheet" href="assets/font-awesome.css">
+    <link rel="stylesheet" media="(min-width:1025px)" href="assets/desktop.css">
+    <link rel="stylesheet"
+          media="(min-width:1025px)"
+          href="http://docs.kissyui.com/kissy-gallery/gallery/kscroll/1.1/assets/clear.css"/>
+</head>
+<body>
+<div id="reader">
+    <div id="head">
+        <a class="navigator mobile-version"><i class="icon-angle-left"></i></a>
+        <div id="branding" class="heading">
+            <h1> Simple Reader </h1>
+        </div>
+    </div>
+    <div id="content">
+        <div id="cats" class="content-column">
+            <div class="sub-entry">
+                <ul class="system-cats cat-list">
+                    <li class="today level-1"><i class="icon-rss"></i> 今日</li>
+                    <li class="all level-1"><i class="icon-reorder"></i> 全部</li>
+                    <li class="star level-1"><i class="icon-bookmark-empty"></i> 收藏</li>
+
+                </ul>
+                <div class="section">
+                    <div class="scroll_cats" style="overflow:auto;">
+                        <ul class="user-cats cat-list" id="user-cat-list">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-actions">
+
+                <ul class="action-list">
+                    <li class="action"><a href="#"><i class="icon-share"></i></a></li>
+                    <li class="action"><a href="#">查看全部</a></li>
+                    <li class="action"><a href="#">查看未读</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="list" class="content-column">
+
+            <div class="section entries sub-entry">
+                <div class="scroll_content" style="overflow:auto;">
+                    <ul class="entry-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="column-actions">
+                <ul class="action-list">
+                    <li class="all-posts active"><i class="icon-circle"></i></li>
+                    <li class="unread-posts"><i class="icon-circle-blank"></i></li>
+                    <li class="star-posts"><i class="icon-heart"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="entry" class="content-column">
+            <div class="sub-entry" id="entry-content">
+            </div>
+            <div class="column-actions">
+
+                <ul class="action-list">
+                    <li class="toggle-read"><i class="icon-circle"></i></li>
+                    <li class="toggle-star"><i class="icon-heart-empty"></i></li>
+                    <li class="prev"><i class="icon-chevron-up"></i></li>
+                    <li class="next"><i class="icon-chevron-down"></i></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy.js" charset="utf-8"></script>
+<!--gaozhan-->
+<script type="text/javascript" src="assets/index.js"></script>
+<script type="text/javascript" src="assets/scroll.js"></script>
+<!--gaozhan-->
+<script type="text/javascript">
+    (function (S) {
+        S.use('reader');
+        if (S.UA.ipad) {
+            S.use('pad');
+        }
+        S.later(function(){
+            S.use('mobile');
+        },1000)
+
+    })(KISSY);
+
+</script>
+
+<script type="text/javascript" src="assets/pad.js"></script>
+<script type="text/javascript" src="assets/mobile.js"></script>
+</body>
+</html>

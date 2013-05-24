@@ -1,0 +1,107 @@
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+	ServerAdmin jizha.wyj@taobao.com
+
+	FileETag None
+#	ExpiresActive On
+#	ExpiresDefault "access plus 10 year"
+#	ExpiresDefault A315360000
+#	ExpiresByType text/html A300
+
+
+	DocumentRoot /home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+
+	<Directory /home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/>
+		Options FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+		AddHandler mod_python .py
+		SetHandler python-program
+		PythonPath "sys.path + ['/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/']"
+		PythonHandler django.core.handlers.modpython
+		SetEnv DJANGO_SETTINGS_MODULE SimpleReader.settings
+		PythonAutoReload On
+		PythonDebug On
+	</Directory>
+
+	<Directory /home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/>
+		Order Deny,Allow
+		Allow from all
+		SetHandler None
+	</Directory>
+
+	<Directory "/usr/local/lib/python2.6/site-packages/django/contrib/admin/media">
+		Order Deny,Allow
+		Allow from all
+		SetHandler None
+	</Directory>
+
+	Alias "/static/admin/img" "/usr/local/lib/python2.6/site-packages/django/contrib/admin/media/img/admin"
+	<Location "/static/admin/img">
+		SetHandler None
+	</Location>
+
+	Alias "/static/admin" "/usr/local/lib/python2.6/site-packages/django/contrib/admin/media"
+	<Location "/static/admin">
+		SetHandler None
+	</Location>
+
+	Alias "/css" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/css"
+	<Location "/css">
+		SetHandler None
+	</Location>
+
+	Alias "/js" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/js"
+	<Location "/js">
+		SetHandler None
+	</Location>
+
+	Alias "/images" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/images"
+	<Location "/images">
+		SetHandler None
+	</Location>
+
+	Alias "/favicon.ico" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/images/favicon.ico"
+	<Location "/favicon.ico">
+		SetHandler None
+	</Location>
+
+	Alias "/uploads" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/uploads"
+	<Location "/uploads">
+		SetHandler None
+	</Location>
+
+	Alias "/static" "/home/jizha.wyj/labs/simplereader/www_svr/SimpleReader/media/static"
+	<Location "/static">
+		SetHandler None
+	</Location>
+
+	Alias "/docs" "/home/jizha.wyj/uxdata/goldminer/docs2/src/_build/html"
+	<Location "/static">
+		SetHandler None
+	</Location>
+
+	<LocationMatch "\.(jpg|gif|png|txt|ico|pdf|css|jpeg|js)$">
+		SetHandler None
+	</LocationMatch>
+
+	<LocationMatch "\.svn/">
+		Order allow,deny
+		Deny from all
+	</LocationMatch>
+
+	#ErrorLog /var/log/apache2/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	#CustomLog /var/log/apache2/access.log combined
+
+</VirtualHost>

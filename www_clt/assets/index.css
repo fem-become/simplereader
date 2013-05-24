@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+}
+
+
+#reader {
+    max-width: 900px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+#head:after,
+#content:after {
+    content: '.';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+#branding {
+    width: 300px;
+    float: left;
+}
+
+#search {
+    width: 200px;
+    float: right;
+    padding-right: 30px;
+}
+.content-column {
+    float: left;
+    position: relative;
+    width: 32%;
+}
+
+.column-actions {
+    position: absolute;
+    bottom: 0;
+}
+
+.column-actions .action {
+    display: inline;
+    content: ".";
+}
+
+.column-actions .action a {
+    display: block;
+    /*text-indent: -9999px;*/
+
+}
+
+.cat-list li {
+margin-left: 35px;
+}
+
+.entry-list {
+    overflow: scroll;
+}
+
+.entry-list li {
+    cursor: pointer;
+    margin: 10px 0;
+    list-style: none;
+}
+
+.entry-list li:hover {
+    color: #0088ff;
+}
+
+.title h2 {
+    font-size: 14px;
+}
+.system-cats li{
+    cursor: pointer;
+}
